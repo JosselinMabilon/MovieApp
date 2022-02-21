@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Forest</string>
+    <string name="title_serie">série</string>
+    <string name="title_category">category</string>
+    <string name="title_search">Recherche</string>
+    <string name="title_favorite">favoris</string>
+    <string name="title_setting">Paramètres</string>
+    <string name="nav_title_serie">Série</string>
+    <string name="nav_title_category">Catégories</string>
+    <string name="nav_title_search">Rechercher</string>
+    <string name="nav_title_favorite">Favoris</string>
+    <string name="nav_title_settings">Paramètres</string>
+    <string name="splashScreen_author">fait par Josselin MABILON</string>
+    <string name="image_view_for_serie_list">ImageView pour une liste de série</string>
+    <string name="serie_name">nom de série</string>
+    <string name="serie_no_name">Pas de nom</string>
+    <string name="no_internet_connection">Pas de connection Internet</string>
+    <string name="button_retry">Réessayer</string>
+    <string name="launch_image_context_desc">Image de lancement</string>
+    <string name="no_results_found">Aucun résultat trouvé</string>
+    <string name="no_internet_connection_for_search">Pas de connection Internet. Veuillez vérifier si votre connection et réessayer.</string>
+    <string name="title_search_menu">Recherche</string>
+    <string name="switch_dark_mode_text">Mode Sombre</string>
+    <string name="series_status_running">En cours</string>
+    <string name="serie_status_ended">Fini</string>
+    <string name="serie_status_in_developement">En développement</string>
+</resources>

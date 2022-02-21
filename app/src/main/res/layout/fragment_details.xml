@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.DetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/background_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/default_serie_image" />
+
+        <ImageView
+            android:id="@+id/image_view_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/background_filter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/ic_poster_shadow" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_detail_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_view_background">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/posterCardView"
+                android:layout_width="@dimen/details_card_view_width"
+                android:layout_height="@dimen/details_card_view_height"
+                android:layout_marginStart="@dimen/details_card_view_margin_start"
+                android:layout_marginTop="@dimen/details_card_view_margin_top"
+                app:cardElevation="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                card_view:cardCornerRadius="@dimen/details_card_view_corner_radius">
+
+                <ImageView
+                    android:id="@+id/image_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/serie_image"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/default_serie_image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/details_text_view_name_margin_start"
+                android:layout_marginTop="@dimen/details_text_view_name_margin_top"
+                android:layout_marginEnd="@dimen/details_text_view_name_margin_end"
+                android:text="@string/name_of_the_serie"
+                android:textColor="@color/white"
+                android:textSize="@dimen/details_text_view_name_tet_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/posterCardView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/posterCardView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="@dimen/details_horizontal_scroll_view_width"
+                android:layout_height="@dimen/details_horizontal_scroll_view_height"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/details_horizontal_scroll_view_margin_start"
+                android:layout_marginEnd="@dimen/details_horizontal_scroll_view_margin_end"
+                android:layout_marginTop="@dimen/details_horizontal_scroll_view_margin_top"
+                app:layout_constraintLeft_toRightOf="@+id/posterCardView"
+                app:layout_constraintStart_toEndOf="@+id/posterCardView"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_name">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/genresTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </HorizontalScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/details_scroll_view_margin"
+                android:layout_marginTop="@dimen/details_scroll_view_margin"
+                android:layout_marginEnd="@dimen/details_scroll_view_margin"
+                android:layout_marginBottom="@dimen/details_scroll_view_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/posterCardView">
+
+                <TextView
+                    android:id="@+id/text_view_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/details_summary_stext_view_text_size" />
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

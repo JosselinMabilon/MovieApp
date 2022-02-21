@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/serie_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_material_margin_left"
+        android:layout_marginEnd="@dimen/card_material_margin_right"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        android:layout_marginTop="@dimen/card_material_margin_top"
+        android:layout_marginBottom="@dimen/card_material_margin_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/rating_cardview_size"
+                    android:layout_height="@dimen/rating_cardview_size"
+                    android:background="@color/black"
+                    android:foregroundGravity="center"
+                    app:cardCornerRadius="@dimen/rating_cardview_border_radius"
+                    app:cardElevation="@dimen/rating_cardview_elevation"
+                    android:layout_marginTop="@dimen/rating_cardview_margin_start_and_end"
+                    android:layout_marginStart="@dimen/rating_cardview_margin_start_and_end"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/rating_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/rating_text"
+                        android:textColor="@color/yellow_light"
+                        android:textSize="@dimen/rating_text_size" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/serie_card_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_image_height"
+                    android:contentDescription="@string/image_view_for_serie_list"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:src="@drawable/default_serie_image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_layout_text_view_padding">
+
+                <TextView
+                    android:id="@+id/serie_card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="@dimen/card_text_view_size"
+                    android:ellipsize="end"
+                    android:text="@string/serie_name"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

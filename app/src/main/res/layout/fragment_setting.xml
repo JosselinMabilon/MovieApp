@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/setting_padding_bottom_between_feature_and_title">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_setting"
+                android:layout_marginEnd="@dimen/setting_title_margin_end"
+                android:layout_marginTop="@dimen/setting_title_margin_top"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:gravity="center"
+                android:textSize="@dimen/toolbar_title_size"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/dark_mode_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/switch_dark_mode_text"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:useMaterialThemeColors="true"
+                android:padding="@dimen/setting_padding_feature" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/gif_setting"/>
+
+    </LinearLayout>
+
+</layout>

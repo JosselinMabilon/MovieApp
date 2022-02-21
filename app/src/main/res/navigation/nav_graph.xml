@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_serie">
+
+    <fragment
+        android:id="@+id/navigation_serie"
+        android:name="com.example.forest.ui.SerieFragment"
+        android:label="@string/title_serie"
+        tools:layout="@layout/fragment_serie" >
+        <action
+            android:id="@+id/action_navigation_serie_to_detailsFragment4"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.forest.ui.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_searchDetailsFragment"
+            app:destination="@id/searchDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.forest.ui.FavoriteFragment"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.forest.ui.SettingsFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.forest.ui.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="series"
+            app:argType="com.example.forest.domain.model.Serie" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchDetailsFragment"
+        android:name="com.example.forest.ui.SearchDetailsFragment"
+        android:label="fragment_search_details"
+        tools:layout="@layout/fragment_search_details" >
+        <argument
+            android:name="searchSerie"
+            app:argType="com.example.forest.domain.model.SearchSerie" />
+    </fragment>
+
+</navigation>
